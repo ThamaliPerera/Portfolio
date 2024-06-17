@@ -1,0 +1,148 @@
+body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+.options{
+	height: 100%;
+	flex: 2;
+	background-color: #0F2E5A;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.selected{
+	width: 100%;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	a{
+		text-decoration: none;
+		color: #0F2E5A;
+	}
+}
+
+.unselected{
+	width: 100%;
+	background-color: #0F2E5A;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	a{
+		text-decoration: none;
+		color: white;
+	}
+}
+
+.intro_main{
+	margin: 10px;
+	border: 2px solid #0F2E5A;
+	flex: 8;
+	padding: 20px;
+	display: flex;
+	.intro_text{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		flex: 5;
+		padding: 50px;
+		color: #0F2E5A;
+		h1{
+			font-size: 70px;
+			margin: 0;
+		}
+		h2{
+			font-size: 30px;
+		}
+		h3{
+			font-size: 20px;
+		}
+		button{
+			width: 200px;
+			height: 60px;
+			border-radius: 10px;
+			background-color: #0F2E5A;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			a{
+				text-decoration: none;
+				color: white;
+			}
+		}
+	}
+	.intro_img{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex: 5;
+		padding: 50px;
+		img{
+			width: 100%;
+		}
+	}
+}
+
+.con_main{
+	display: flex;
+	margin: 10px;
+	border: 2px solid #0F2E5A;
+	flex-direction: column;
+	height: 100%;
+	flex: 8;
+	justify-content: center;
+	align-items: center;
+	.con_title{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		h1{
+			font-size: 70px;
+			margin: 10px;
+		}
+	}
+	.con_que{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		h2{
+			font-size: 30px;
+		}
+	}
+	.contacts{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.contact{
+			margin: 20px;
+			padding: 20px 10px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			background-color: cornflowerblue;
+			width: 300px;
+			height: 150px;
+			span{
+				font-size: 40px;
+				font-weight: bold;
+				margin: 0;
+			}
+			h2{
+				font-size: 30px;
+				margin: 0;
+			}
+			h3{
+				font-size: 20px;
+				margin: 0;
+			}
+		}
+	}
+}
