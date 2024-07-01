@@ -1,0 +1,132 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    margin-left: 300px;
+    background: white;
+    min-height: 100vh;
+    animation: fadeIn 2s forwards;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.contacts-info {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-card {
+    flex: 1 0 300px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.contact-details {
+    margin-top: 0;
+    color: #666;
+}
+
+.add-more-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.add-more-btn:hover {
+    background: #0056b3;
+}
+
+/* Icon styles */
+.card-icon {
+    font-size: 36px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Card specific icon colors */
+.phone .card-icon {
+    color: #4CAF50; /* Green */
+}
+
+.address .card-icon {
+    color: #FF9800; /* Orange */
+}
+
+.email .card-icon {
+    color: #2196F3; /* Blue */
+}
+
+.github .card-icon {
+    color: #333333; /* Dark gray */
+}
+
+.linkedin .card-icon {
+    color: #0077B5; /* LinkedIn blue */
+}
+
+.facebook .card-icon {
+    color: #3b5998; /* Facebook blue */
+}
+
+.youtube .card-icon {
+    color: #c4302b; /* YouTube red */
+}
+
+.instagram .card-icon {
+    color: #e4405f; /* Instagram pink */
+}
+
+.website .card-icon {
+    color: #795548; /* Brown */
+}
+
+/* New Cards: Twitter, TikTok, Snapchat */
+.twitter .card-icon {
+    color: #1DA1F2; /* Twitter blue */
+}
+
+.tiktok .card-icon {
+    color: #69C9D0; /* TikTok turquoise */
+}
+
+.snapchat .card-icon {
+    color: #FFFC00; /* Snapchat yellow */
+}

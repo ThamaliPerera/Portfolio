@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects of Thamali Perera</title>
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="projects-info">
+            <h2>Projects</h2>
+            <div>
+                <p><strong>Name:</strong> Travo</p>
+                <p><strong>Description:</strong> Travel Management System</p>
+                <p><strong>Technologies Used:</strong></p>
+                <div class="technology-category">
+                    <strong>Front-End Technologies:</strong>
+                    <div id="frontend-technologies" class="selected-technologies">
+                        <span class="selected-tech-item">HTML <span class="close-btn">&times;</span></span>
+                        <span class="selected-tech-item">CSS <span class="close-btn">&times;</span></span>
+                        <span class="selected-tech-item">JavaScript <span class="close-btn">&times;</span></span>
+                    </div>
+                </div>
+                <div class="technology-category">
+                    <strong>Back-End Technologies:</strong>
+                    <div id="backend-technologies" class="selected-technologies">
+                        <span class="selected-tech-item">Node.js <span class="close-btn">&times;</span></span>
+                    </div>
+                </div>
+                <div class="technology-category">
+                    <strong>Database:</strong>
+                    <div id="database-technologies" class="selected-technologies">
+                        <span class="selected-tech-item">MySQL <span class="close-btn">&times;</span></span>
+                    </div>
+                </div>
+                <p><strong>Github Link:</strong> <a href="#">Github Profile</a></p>
+            </div>
+            <button class="add-project-btn"><i class="fas fa-plus"></i> Add New Project</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const closeBtns = document.querySelectorAll('.close-btn');
+
+            // Event listener for close buttons
+            closeBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    this.parentElement.remove();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
