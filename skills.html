@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills of Thamali Perera</title>
+    <link rel="stylesheet" href="skills.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="skills-info">
+            <h2>Skills</h2>
+            <div class="technologies">
+                <span>
+                    <p><strong>Programming Languages: </strong></p>
+                    <select name="programmingLanguages" id="programming-languages">
+                        <option value="">Select</option>
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Java">Java</option>
+                        <option value="Python">Python</option>
+                    </select>
+                </span>
+                <span>
+                    <p><strong>Web Development: </strong></p>
+                    <select name="webDevelopment" id="web-development">
+                        <option value="">Select</option>
+                        <option value="React">React</option>
+                        <option value="Angular">Angular</option>
+                        <option value="Vue">Vue</option>
+                    </select>
+                </span>
+                <span>
+                    <p><strong>Mobile Development: </strong></p>
+                    <select name="mobileDevelopment" id="mobile-development">
+                        <option value="">Select</option>
+                        <option value="Swift">Swift</option>
+                        <option value="Kotlin">Kotlin</option>
+                        <option value="Flutter">Flutter</option>
+                    </select>
+                </span>
+                <span>
+                    <p><strong>Database: </strong></p>
+                    <select name="database" id="database">
+                        <option value="">Select</option>
+                        <option value="MySQL">MySQL</option>
+                        <option value="MongoDB">MongoDB</option>
+                        <option value="Firebase">Firebase</option>
+                    </select>
+                </span>
+            </div>
+            <div id="selected-skills" class="selected-skills"></div>
+            <p><strong>Certificates:</strong> <a href="#">Certificate</a></p>
+            <div class="buttons">
+                <button class="edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                <button class="delete-btn"><i class="fas fa-trash-alt"></i> Delete</button>
+            </div>
+            <button class="add-skill-btn"><i class="fas fa-plus"></i> Add New Skill</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const programmingLanguagesSelect = document.getElementById('programming-languages');
+            const webDevelopmentSelect = document.getElementById('web-development');
+            const mobileDevelopmentSelect = document.getElementById('mobile-development');
+            const databaseSelect = document.getElementById('database');
+            const selectedSkillsContainer = document.getElementById('selected-skills');
+
+            // Event listeners for select dropdowns
+            programmingLanguagesSelect.addEventListener('change', function () {
+                handleSkillSelection('Programming Languages', this.value);
+            });
+
+            webDevelopmentSelect.addEventListener('change', function () {
+                handleSkillSelection('Web Development', this.value);
+            });
+
+            mobileDevelopmentSelect.addEventListener('change', function () {
+                handleSkillSelection('Mobile Development', this.value);
+            });
+
+            databaseSelect.addEventListener('change', function () {
+                handleSkillSelection('Database', this.value);
+            });
+
+            // Function to handle skill selection
+            function handleSkillSelection(category, value) {
+                if (value) {
+                    // Check if the skill is already selected
+                    if (!isSkillSelected(category, value)) {
+                        const selectedSkillElement = document.createElement('div');
+                        selectedSkillElement.classList.add('selected-skill-item');
+                        selectedSkillElement.dataset.category = category;
+                        selectedSkillElement.textContent = value;
+                        
+                        // Add close button
+                        const closeButton = document.createElement('span');
+                        closeButton.classList.add('close-btn');
+                        closeButton.innerHTML = '&times;';
+                        closeButton.addEventListener('click', function () {
+                            selectedSkillElement.remove();
+                        });
+                        selectedSkillElement.appendChild(closeButton);
+
+                        selectedSkillsContainer.appendChild(selectedSkillElement);
+                    }
+                    // Clear the select dropdown after selection
+                    clearSelectDropdown(category);
+                }
+            }
+
+            // Function to check if skill is already selected
+            function isSkillSelected(category, value) {
+                const selectedItems = selectedSkillsContainer.querySelectorAll('.selected-skill-item');
+                for (let item of selectedItems) {
+                    if (item.dataset.category === category && item.textContent.trim() === value) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+            // Function to clear select dropdown after selection
+            function clearSelectDropdown(category) {
+                switch (category) {
+                    case 'Programming Languages':
+                        programmingLanguagesSelect.value = '';
+                        break;
+                    case 'Web Development':
+                        webDevelopmentSelect.value = '';
+                        break;
+                    case 'Mobile Development':
+                        mobileDevelopmentSelect.value = '';
+                        break;
+                    case 'Database':
+                        databaseSelect.value = '';
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
